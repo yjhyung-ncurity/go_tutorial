@@ -24,7 +24,20 @@ func main(){
 	// cards = append(cards, "Seven of Spades")
 
 //2-4. calling new deck of cards created in deck.go file 
-		cards := newDeck()
+		// cards := newDeck()
+
+		// hand, remainingCards :=  deal(cards, 5)
+
+		// hand.print()
+		// remainingCards.print()
+
+//2-5. converting deck type into a slice of string then into a string 
+		// cards := newDeck()
+		// fmt.Println(cards.toString())
+		// cards.saveToFile("my_cards")
+
+// 2-6. Reading File from a HardDrive
+		cards := newDeckFromFile("my_cards")
 		cards.print()
 }
 
