@@ -1,6 +1,5 @@
 package main
 
-//main function
 func main() {
 	//1. Declaring a Variable
 	//var card string = "Ace of Spades"
