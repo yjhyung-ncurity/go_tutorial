@@ -75,7 +75,7 @@
 
 
 ## LECTURE 4 - STRUCTS DATA TYPE
- - What is Struct?
+### 1. What is Struct?
     - Data structure in Go. 
     - Collection of properties that are related together
     - Create a struct and assign more than one fields (data type)
@@ -84,7 +84,7 @@
     - Similar to :
         - Js: plain object , Ruby: hash , Python : dictionary 
 
- - Steps / Procedures
+### 2. Steps / Procedures
     - 1) Define a struct (initialize)
         - ex) type person struct { firstName string lastName string}
     - 2) Declare a struct (give values)
@@ -99,17 +99,17 @@
             - Underneath the declaration of variable and then .. 
                 - ex) alex.firstName , alex.lastName
 
- - Embedding Struct within a Struct 
+### 3. Embedding Struct within a Struct 
     - ex) 1st Struct type Person holds 3 fields : firstName (string), lastName (string) and contact (contactInfo)
     -     2nd Struct type ContactInfo holds 2 fields : email (string), zipcode (int) and have this two fields be sent to 1st Struct's contact field
     - when declaring a value to a property(field), every property(field) has to end with comma
 
- - Creating receiver using struct && Struct with Pointers
+### 4. Creating receiver using struct && Struct with Pointers
     - use person type as a receiver to print out the details of that person 
     - use person type as a receive to update that person's firstName (need to use pointers otherwise it will print out the initial value not the changed value)
         - REMINDER : although the value might have changed,since the changed value is not stored in the same address that have initial value
 
- - Pointer Operations:
+### 5. Pointer Operations:
     - & operator : Gives the access to the memory (RAM) address of the value this variable is pointing at
     - * operator : Gives the value this memory(RAM) address is pointing at
             - Difference between : 
@@ -117,20 +117,27 @@
 
                 - Astrix infront of an actual pointer: (ex. *pointerToPerson) is an actual operator which takes a pointer and turns it into a value. 
 
- - Pointer Shortcut 
+### 6. Pointer Shortcut 
     - Two ways to use pointer:
         - 1) get the memory access from the variable(ex. jim) by using & operator infront of the variable (ex. &jim) and use pointer as a receiver (ex. jimPointer.updateName("James") instead of jim.updateName("James"))
         - 2) (shortcut version) just use value (ex. jim.updateName("James"))
     
- - Gotchas with Pointers (Slice update vs. Struct update)
+### 7. Gotchas with Pointers (Slice update vs. Struct update)
     - Slice : it automatically changes the element because it is _reference type_
     - Struct : it does not show the changed value because it is a _value type_
 
- - Reference Types vs. Value Types
+### 8. Reference Types vs. Value Types
     - Reference Type : 
         - Slices , Maps , Channels , Pointers , Functions
     - Value Type :
         - Int , Float , String , Bool , Structs
+
+
+
+## LECTURE 5
+
+### 1. What is a Map?
+
             
 
 
