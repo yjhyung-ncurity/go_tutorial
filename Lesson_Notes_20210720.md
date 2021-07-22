@@ -61,4 +61,17 @@
     - Make sure if the length of newly loaded file matches x number of cards (total of 16). if not return error message
     - Final step use Remove() again to remove files (ex. _decktesting)
 
+### Review
+ - import : when importing more than one packages use parentheses and no commas in between
+ - purpose of deck.go excercise
+    - to describe what a deck is and it's behavior by first creating a type called 'deck' which is an abstract form of datatypes matched which in this case it would be []string (slice of string)
+        - ex) NewDeck() deck : when called, immediately creates a set of deck and return it in 'deck' type form 
+    - receiver function is a function that accepts a receiver. 
+        - ex) (d deck) Print() : added a receiver right before the function name so any deck can call the Print function 
+        
+ - Things to Consider : 
+    - why structured deal() function without a receiver? 
+    - t *testing.T : astrix 
+
+
 
