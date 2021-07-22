@@ -61,7 +61,7 @@
     - Make sure if the length of newly loaded file matches x number of cards (total of 16). if not return error message
     - Final step use Remove() again to remove files (ex. _decktesting)
 
-### Review
+### Review LECTURE 1 ~ 3
  - import : when importing more than one packages use parentheses and no commas in between
  - purpose of deck.go excercise
     - to describe what a deck is and it's behavior by first creating a type called 'deck' which is an abstract form of datatypes matched which in this case it would be []string (slice of string)
@@ -70,8 +70,71 @@
         - ex) (d deck) Print() : added a receiver right before the function name so any deck can call the Print function 
         
  - Things to Consider : 
-    - why structured deal() function without a receiver? 
-    - t *testing.T : astrix 
+    - why structured deal() function does not use receiver? 
+    - t *testing.T 
+
+
+## LECTURE 4 - STRUCTS DATA TYPE
+ - What is Struct?
+    - Data structure in Go. 
+    - Collection of properties that are related together
+    - Create a struct and assign more than one fields (data type)
+        - ex) Struct type of Card 
+        - ex) Fields : suit(string data type) , value(string data type)
+    - Similar to :
+        - Js: plain object , Ruby: hash , Python : dictionary 
+
+ - Steps / Procedures
+    - 1) Define a struct (initialize)
+        - ex) type person struct { firstName string lastName string}
+    - 2) Declare a struct (give values)
+        - Ways to declare : 
+            - 1. maps with defined struct based on the order of the fields (Go automatically assumes the order)
+                - ex) alex := person("Alex", "Andersen")
+                - cannot change the order of the field defined - if the two is swapped then Alex is mapped as lastName 
+            - 2. specifically map the values with the field defined above
+                - ex) alex := person(firstName: "Alex" , lastName: "Andersen")
+            - 3. create a variable with struct data type assign a zero Value 
+        - How to update the properties/fields of a struct ?
+            - Underneath the declaration of variable and then .. 
+                - ex) alex.firstName , alex.lastName
+
+ - Embedding Struct within a Struct 
+    - ex) 1st Struct type Person holds 3 fields : firstName (string), lastName (string) and contact (contactInfo)
+    -     2nd Struct type ContactInfo holds 2 fields : email (string), zipcode (int) and have this two fields be sent to 1st Struct's contact field
+    - when declaring a value to a property(field), every property(field) has to end with comma
+
+ - Creating receiver using struct && Struct with Pointers
+    - use person type as a receiver to print out the details of that person 
+    - use person type as a receive to update that person's firstName (need to use pointers otherwise it will print out the initial value not the changed value)
+        - REMINDER : although the value might have changed,since the changed value is not stored in the same address that have initial value
+
+ - Pointer Operations:
+    - & operator : Gives the access to the memory (RAM) address of the value this variable is pointing at
+    - * operator : Gives the value this memory(RAM) address is pointing at
+            - Difference between : 
+                - Astrix infront of a type: (ex. pointerToPerson *person) is a type description. It means that the function can only be called with a receiver of this certain type
+
+                - Astrix infront of an actual pointer: (ex. *pointerToPerson) is an actual operator which takes a pointer and turns it into a value. 
+
+ - Pointer Shortcut 
+    - Two ways to use pointer:
+        - 1) get the memory access from the variable(ex. jim) by using & operator infront of the variable (ex. &jim) and use pointer as a receiver (ex. jimPointer.updateName("James") instead of jim.updateName("James"))
+        - 2) (shortcut version) just use value (ex. jim.updateName("James"))
+    
+ - Gotchas with Pointers (Slice update vs. Struct update)
+    - Slice : it automatically changes the element because it is _reference type_
+    - Struct : it does not show the changed value because it is a _value type_
+
+ - Reference Types vs. Value Types
+    - Reference Type : 
+        - Slices , Maps , Channels , Pointers , Functions
+    - Value Type :
+        - Int , Float , String , Bool , Structs
+            
+
+
+
 
 
 
