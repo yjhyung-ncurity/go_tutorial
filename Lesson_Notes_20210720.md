@@ -46,5 +46,19 @@
 
 
 ### Testing with Go 
+ - To make a test file, create a new file and name has to ends in _test.go (ex. testing main file. => main_test.go)
+ - To run test, use `go test` command
+ - Excercise #1 : new deck function by using if statement and errorf in TestNewDeck() to test the following :
+    - To make sure deck is created with x number of cards (ex. 4 suits, 4 numbers = total of 16 cards)
+    - To make sure the first card is an Ace of Spades
+    - To make sure that the last card is Four of Clubs 
+
+ - Excercise #2 : save to file function and new deck from file function by using if statement and errorf in TestSaveToDeckAndNewDeckFromFile() to test the following :
+    - To make sure if there is any crashed files
+    - Use Remove() within os package provided by Go to remove any of the unnecessary / crashed files (ex. _decktesting)
+    - Create a new deck and save it to a file by using SaveToFile function (ex. _decktesting)
+    - Load the file by using NewDeckFromFile function (ex. _decktesting)
+    - Make sure if the length of newly loaded file matches x number of cards (total of 16). if not return error message
+    - Final step use Remove() again to remove files (ex. _decktesting)
 
 
