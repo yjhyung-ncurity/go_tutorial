@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"ncurity.com/test/deck"
+	"ncurity.com/test/assignment"
 )
 
 func main() {
@@ -46,10 +46,12 @@ func main() {
 	// cards.print()
 
 	// 2-7. Shuffling the cards using pseudo random generator rand.Intn()
-	cards := deck.NewDeck()
-	cards.Print()
-
-	fmt.Print("xxx")
-
+	// cards := deck.NewDeck()
+	// cards.Print()
 	//result: randomized but always shows the same random results
+
+	//assignment #1 : create a slice of ints from 0 ~ 10 then iterate through a loop and return "odd" if it's odd and "even" if it's even
+	result_test := assignment.NewNum()
+	fmt.Println(result_test)
+
 }
