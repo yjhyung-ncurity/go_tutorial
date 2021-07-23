@@ -137,6 +137,48 @@
 ## LECTURE 5
 
 ### 1. What is a Map?
+ - collection of key value pairs. (consists of key and value)
+ - Similar To : 
+    - Ruby(Hash) , Javascrip(Object) , Python(Dict)
+ - Very similar to Struct but also different in many aspectst
+ - Characteristics:
+    - Both Keys and Values are statically typed
+    - All the keys must be in same type where as all the values must be in same type (but key and value don't have to be in same type)
+
+### 2. Declaring a Map (3 ways)
+ - 1. via literal syntax (declaring with initial value)
+ - 2. using var syntax (declared an empty map)
+ - 3. using make () syntax (declared an empty map)
+
+### 3. Deleting a Map 
+ - Use delete() function 
+
+### 4. Manipulating Maps
+ - Create a function that accepts a map, iterates over and prints out every key value pair inside
+ - Shows how to iterate over a collection of key value
+ - How to pass a map off to another function 
+ - Syntax:
+ ```
+     func printMap(c map[string]string){ 
+        for color, hex:= range c {
+                fmt.Println("Hex code for ", color, "is", hex)
+            } 
+        }
+ ```
+
+### 5. Structs vs. Maps
+ - Maps 
+    - Reference Type
+    - All keys and values must be the same type 
+    - Keys are indexed. can iterate over
+    - 
+
+ - Structs
+    - Value Type
+    - Values can all be different type
+    - Keys don't support indexing
+     
+     
 
             
 

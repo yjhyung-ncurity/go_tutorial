@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //PART 3 main function - not using
 
 //func main() {
@@ -231,3 +233,54 @@ func (p person) print() {
 	fmt.Printf("%+v\n", p)
 }
 */
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//PART 5 Map
+
+//1. declaring a map
+//2. how to delete a map
+// func main() {
+//1. declaring a map - literal syntax (declaring with initial values)
+// colors := map[string]string{
+// 	"red":   "#ff0000",
+// 	"green": "#4bf745",
+// 	"white": "#ffffff",
+// }
+
+//2. declaring a map - using var syntax
+// var colors map[string]string //declared an empty map with no key value inside
+
+//3. declaring a map - using make syntax
+// colors := make(map[string]string) //declared an empty map
+
+// colors["white"] = "#ffffff"
+// colors["black"] = "#000000"
+
+//4. delete using delete()
+// delete(colors, "white")
+// 	fmt.Println(colors)
+// }
+
+//3. Manipulating Maps
+// function that accepts a map, iterates over and prints out every key value pair inside of the map
+// shows how to iterate over a collection of key value
+// how to pass a map off to another function
+func main() {
+	//1. declaring a map - literal syntax (declaring with initial values)
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#4bf745",
+		"white": "#ffffff",
+	}
+
+	//fmt.Println(colors)
+	printMap(colors)
+}
+
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("Hex code for ", color, "is", hex)
+	}
+}
